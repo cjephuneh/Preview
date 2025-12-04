@@ -2,44 +2,62 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white border-t border-gray-800">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* About Section */}
-          <div>
+          {/* About Section with Logo */}
+          <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <svg viewBox="0 0 100 100" className="w-10 h-10">
-                <circle cx="50" cy="50" r="45" fill="#00A651" />
-                <text x="50" y="68" fontSize="40" fill="white" textAnchor="middle" fontWeight="bold" fontFamily="Arial, sans-serif">e</text>
-              </svg>
-              <span className="text-xl font-bold">eCitizen</span>
+              <div className="flex items-center space-x-2">
+                {/* Coat of Arms */}
+                <div className="flex-shrink-0">
+                  <svg width="40" height="48" viewBox="0 0 40 48" className="w-8 h-10">
+                    <path d="M20 4 L28 12 L28 20 L24 24 L24 32 L20 36 L16 32 L16 24 L12 20 L12 12 Z" fill="#000000" stroke="#FFD700" strokeWidth="0.4"/>
+                    <line x1="20" y1="12" x2="20" y2="32" stroke="#FFD700" strokeWidth="0.8"/>
+                    <line x1="12" y1="20" x2="28" y2="20" stroke="#FFD700" strokeWidth="0.8"/>
+                    <circle cx="10" cy="38" r="2.5" fill="#000000"/>
+                    <circle cx="30" cy="38" r="2.5" fill="#000000"/>
+                    <rect x="16" y="40" width="8" height="6" fill="#000000"/>
+                  </svg>
+                </div>
+                {/* eCitizen Logo */}
+                <div className="flex items-center space-x-1">
+                  <div className="w-8 h-8 flex items-center justify-center bg-[#00A651] rounded-full">
+                    <span className="text-white font-bold text-base">e</span>
+                  </div>
+                  <span className="text-lg font-bold">Citizen</span>
+                </div>
+              </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               The single point of access for all government services in Kenya. Simplifying how citizens interact with government.
+            </p>
+            <p className="text-gray-500 text-xs">
+              Government of Kenya
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/national" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/national" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   National Ministries
                 </Link>
               </li>
               <li>
-                <Link href="/agencies" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/agencies" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Agencies
                 </Link>
               </li>
               <li>
-                <Link href="/counties" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/counties" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Counties
                 </Link>
               </li>
@@ -49,57 +67,73 @@ export default function Footer() {
           {/* Support */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Support</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <Link href="/help" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/help" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Help & Support
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  FAQ
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
+                  Frequently Asked Questions
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <a href="tel:+2540200000000" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
+                  Call: +254 020 000 0000
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Legal & Info */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Legal</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
                   Accessibility
                 </Link>
+              </li>
+              <li>
+                <a href="mailto:support@ecitizen.go.ke" className="text-gray-400 hover:text-white transition-colors text-sm inline-block">
+                  support@ecitizen.go.ke
+                </a>
               </li>
             </ul>
           </div>
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} eCitizen. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} eCitizen. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs">
+                Powered by Government of Kenya
+              </p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className="text-gray-500 text-xs">Follow us:</span>
               <a 
-                href="https://www.facebook.com" 
+                href="https://www.facebook.com/ecitizenkenya" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -110,7 +144,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://www.twitter.com" 
+                href="https://twitter.com/ecitizenkenya" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
