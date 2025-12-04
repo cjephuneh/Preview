@@ -67,37 +67,37 @@ export default function AgenciesPage() {
   ]
 
   return (
-    <div classNameName="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main classNameName="flex-1 bg-white py-12">
-        <div classNameName="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div classNameName="flex items-center justify-between mb-8">
-            <h1 classNameName="text-4xl font-bold text-gray-900">Agencies</h1>
-            <Link href="#" classNameName="text-ecitizen-green hover:underline">View all agencies</Link>
+      <main className="flex-1 bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <h1 className="text-4xl font-bold text-gray-900">Agencies</h1>
+            <Link href="#" className="text-ecitizen-green hover:underline">View all agencies</Link>
           </div>
           
-          <div classNameName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {agencies.map((agency, index) => (
               <Link
                 key={index}
                 href={agency.link}
-                classNameName="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-ecitizen-green transition-all group relative"
+                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-ecitizen-green transition-all group relative"
               >
-                <div classNameName="absolute top-4 right-4">
-                  <svg classNameName="w-5 h-5 text-gray-400 group-hover:text-ecitizen-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute top-4 right-4">
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-ecitizen-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </div>
-                <div classNameName="w-16 h-16 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                  <span classNameName="text-2xl font-bold text-gray-400">
+                <div className="w-16 h-16 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-gray-400">
                     {agency.name.charAt(0)}
                   </span>
                 </div>
-                <h3 classNameName="text-lg font-semibold text-gray-900 mb-2 group-hover:text-ecitizen-green">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-ecitizen-green">
                   {agency.name}
                 </h3>
-                <p classNameName="text-sm text-gray-600 line-clamp-3">
+                <p className="text-sm text-gray-600 line-clamp-3">
                   {agency.description}
                 </p>
               </Link>
