@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import LogoImage from '@/components/LogoImage'
 
 export default function Home() {
   return (
@@ -207,8 +208,12 @@ View all <span className="hidden sm:inline">ministries</span>
         <Link href="/national" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Open Ministry Of Agriculture And Livestock Development">
           <div className="p-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ministry-of-agriculture.png"
+                  alt="Ministry logo"
+                  fallbackText="MA"
+                />
               </div>
             <div>
                 <h4 className="line-clamp-2 text-base font-medium text-gray-500 group-hover:text-gray-800">
@@ -220,8 +225,12 @@ Ministry Of Agriculture And Livestock Development
         </Link><Link href="/national" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Open Ministry Of Cooperatives And Micro, Small And Medium Enterprises (MSME) Development">
           <div className="p-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ministry-of-cooperatives.png"
+                  alt="Ministry logo"
+                  fallbackText="MC"
+                />
               </div>
               <div>
                 <h4 className="line-clamp-2 text-base font-medium text-gray-500 group-hover:text-gray-800">
@@ -233,21 +242,29 @@ Ministry Of Cooperatives And Micro, Small And Medium Enterprises (MSME) Developm
         </Link><Link href="/national" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Open Ministry Of Education">
           <div className="p-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ministry-of-education.png"
+                  alt="Ministry logo"
+                  fallbackText="ME"
+                />
               </div>
               <div>
                 <h4 className="line-clamp-2 text-base font-medium text-gray-500 group-hover:text-gray-800">
 Ministry Of Education
                 </h4>
+              </div>
             </div>
           </div>
-        </div>
         </Link><Link href="/national" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Open Ministry Of Energy And Petroleum">
           <div className="p-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ministry-of-energy.png"
+                  alt="Ministry logo"
+                  fallbackText="EP"
+                />
               </div>
               <div>
                 <h4 className="line-clamp-2 text-base font-medium text-gray-500 group-hover:text-gray-800">
@@ -259,8 +276,12 @@ Ministry Of Energy And Petroleum
         </Link><Link href="/national" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Open Ministry Of Environment, Climate Change And Forestry">
           <div className="p-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ministry-of-environment.png"
+                  alt="Ministry logo"
+                  fallbackText="EF"
+                />
               </div>
               <div>
                 <h4 className="line-clamp-2 text-base font-medium text-gray-500 group-hover:text-gray-800">
@@ -287,7 +308,15 @@ View all <span className="hidden sm:inline">agencies</span>
         <a target="_blank" href="https://serviceportal.ntsa.go.ke/dashboard" title="Navigate to National Transport And Safety Authority (NTSA) (New) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ntsa-logo.png"
+                  alt="NTSA logo"
+                  fallbackText="NTSA"
+                  className="w-full h-full object-contain"
+                  fallbackTextSize="small"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -301,10 +330,18 @@ Dedicated platform for Application and Renewal of Driving Licence, Driving Schoo
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="https://ntsa.ecitizen.go.ke/" title="Navigate to National Transport And Safety Authority (NTSA) (Old) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="https://ntsa.ecitizen.go.ke/" title="Navigate to National Transport And Safety Authority (NTSA) (Old) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ntsa-logo.png"
+                  alt="NTSA logo"
+                  fallbackText="NTSA"
+                  className="w-full h-full object-contain"
+                  fallbackTextSize="small"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -318,10 +355,17 @@ National Transport and Safety Authority Act (NTSA) is a statutory body establish
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="https://dis.ecitizen.go.ke/dashboard" title="Navigate to Directorate of Immigration Services (New Applications) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="https://dis.ecitizen.go.ke/dashboard" title="Navigate to Directorate of Immigration Services (New Applications) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/dis-logo.png"
+                  alt="DIS logo"
+                  fallbackText="DIS"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -335,10 +379,17 @@ Utilize DIS's online services for efficient ePassport, temporary permit, and eVi
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="https://kws.ecitizen.go.ke/" title="Navigate to Kenya Wildlife Service page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="https://kws.ecitizen.go.ke/" title="Navigate to Kenya Wildlife Service page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/kws-logo.png"
+                  alt="KWS logo"
+                  fallbackText="KWS"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -353,10 +404,17 @@ Kenya Parks
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="https://dci.ecitizen.go.ke/dashboard" title="Navigate to Directorate of Criminal Investigations page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="https://dci.ecitizen.go.ke/dashboard" title="Navigate to Directorate of Criminal Investigations page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/dci-logo.png"
+                  alt="DCI logo"
+                  fallbackText="DCI"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -370,10 +428,17 @@ Access the Directorate of Criminal Investigations' online platform for police cl
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="http://brs.ecitizen.go.ke/" title="Navigate to Business Registration Services page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="http://brs.ecitizen.go.ke/" title="Navigate to Business Registration Services page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/brs-logo.png"
+                  alt="BRS logo"
+                  fallbackText="BRS"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -387,10 +452,17 @@ Leverage BRS's digital platform for simplified and efficient business registrati
               </p>
             </div>
           </div>
-        </a><a target="_blank" href="https://ecitizen.kra.go.ke/" title="Navigate to Kenya Revenue Authority page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>        <a target="_blank" href="https://ecitizen.kra.go.ke/" title="Navigate to Kenya Revenue Authority page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/kra-logo.png"
+                  alt="KRA logo"
+                  fallbackText="KRA"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -407,7 +479,14 @@ To enhance mobilisation of government revenue and to facilitate growth in econom
         </a><a target="_blank" href="https://oag.ecitizen.go.ke/dashboard" title="Navigate to Registrar Of Marriages page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/oag-logo.png"
+                  alt="OAG logo"
+                  fallbackText="OAG"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -424,7 +503,14 @@ Utilize OAG's online services for efficient marriage registration and other lega
         </a><a target="_blank" href="https://dcrs.ecitizen.go.ke/dashboard" title="Navigate to Civil Registration Services page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/dcrs-logo.png"
+                  alt="DCRS logo"
+                  fallbackText="CRS"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -436,12 +522,19 @@ Civil Registration Services
               <p className="text-sm line-clamp-2 font-light text-gray-500/90 group-hover:text-gray-800">
 Access CRS's online platform to conveniently apply and pay for birth and death registration services.
               </p>
-            </div>
           </div>
+        </div>
         </a><a target="_blank" href="https://www.bomayangu.go.ke/" title="Navigate to Boma Yangu page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/boma-yangu-logo.png"
+                  alt="Boma Yangu logo"
+                  fallbackText="BY"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
               </svg>
@@ -458,11 +551,18 @@ The Boma Yangu platform is the gateway into the Affordable Housing Program. Star
         </a><a target="_blank" href="https://ncpwd.ecitizen.go.ke/" title="Navigate to National Council for Persons with Disabilities(NCPWD) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/ncpwd-logo.png"
+                  alt="NCPWD logo"
+                  fallbackText="NC"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
-              </svg>
-            </div>
+                </svg>
+              </div>
             <div className="p-3">
               <h4 className="text-base line-clamp-2 font-medium text-gray-500 group-hover:text-gray-800 mb-2">
 National Council for Persons with Disabilities(NCPWD)
@@ -475,7 +575,14 @@ To promote and protect equalization of opportunities and realization of human ri
         </a><a target="_blank" href="https://kebs.org/kebs-services/" title="Navigate to Kenya Bureau of Standards (KEBS) page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/kebs-logo.png"
+                  alt="KEBS logo"
+                  fallbackText="KB"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
                 </svg>
@@ -492,7 +599,14 @@ The Kenya Bureau of Standards (KEBS) has remained the premier government agency 
         </a><a target="_blank" href="https://nrb.ecitizen.go.ke/" title="Navigate to National Registration Bureau page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
-              
+              <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/nrb-logo.png"
+                  alt="NRB logo"
+                  fallbackText="NRB"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
                 </svg>
@@ -521,8 +635,12 @@ The Department of National Registration Bureau was established in 1978 to implem
         <Link href="/counties/001-mombasa-county" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 001 - Mombasa County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/mombasa-logo.png"
+                  alt="Mombasa County logo"
+                  fallbackText="001"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
@@ -534,8 +652,12 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link><Link href="/counties/012-meru" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 012 - Meru County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/meru-logo.png"
+                  alt="Meru County logo"
+                  fallbackText="012"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
@@ -547,8 +669,12 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link><Link href="/counties/013-tharaka-nithi" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 013 - Tharaka-Nithi County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/tharaka-nithi-logo.png"
+                  alt="Tharaka-Nithi County logo"
+                  fallbackText="013"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
@@ -560,8 +686,12 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link><Link href="/counties/014-embu" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 014 - Embu County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/embu-logo.png"
+                  alt="Embu County logo"
+                  fallbackText="014"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
@@ -573,8 +703,12 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link><Link href="/counties/034-kajiado" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 034 - Kajiado County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/kajiado-logo.png"
+                  alt="Kajiado County logo"
+                  fallbackText="034"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
@@ -586,21 +720,29 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link><Link href="/counties/036-bomet" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 036 - Bomet County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/bomet-logo.png"
+                  alt="Bomet County logo"
+                  fallbackText="036"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
 036 - Bomet County
                 </h4>
+              </div>
             </div>
           </div>
-        </div>
         </Link><Link href="/counties/042-kisumu-county" className="group block overflow-hidden rounded-lg border border-gray-200 bg-white hover:bg-gray-50" title="Navigate to 042 - Kisumu County page">
           <div className="xs:px-2 px-2 py-2">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 self-center">
-                
+              <div className="flex-shrink-0 self-center w-10 h-10 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
+                <LogoImage 
+                  src="https://demoadmin.ecitizen.pesaflow.com/assets/uploads/counties/kisumu-logo.png"
+                  alt="Kisumu County logo"
+                  fallbackText="042"
+                />
               </div>
               <div>
                 <h4 className="text-base font-medium text-gray-500 group-hover:text-gray-800 sm:text-lg">
