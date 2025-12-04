@@ -364,6 +364,7 @@ National Transport and Safety Authority Act (NTSA) is a statutory body establish
                   alt="DIS logo"
                   fallbackText="DIS"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -388,6 +389,7 @@ Utilize DIS's online services for efficient ePassport, temporary permit, and eVi
                   alt="KWS logo"
                   fallbackText="KWS"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -413,6 +415,7 @@ Kenya Parks
                   alt="DCI logo"
                   fallbackText="DCI"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -437,6 +440,7 @@ Access the Directorate of Criminal Investigations' online platform for police cl
                   alt="BRS logo"
                   fallbackText="BRS"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -461,6 +465,7 @@ Leverage BRS's digital platform for simplified and efficient business registrati
                   alt="KRA logo"
                   fallbackText="KRA"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -485,6 +490,7 @@ To enhance mobilisation of government revenue and to facilitate growth in econom
                   alt="OAG logo"
                   fallbackText="OAG"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -509,6 +515,7 @@ Utilize OAG's online services for efficient marriage registration and other lega
                   alt="DCRS logo"
                   fallbackText="CRS"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -533,6 +540,7 @@ Access CRS's online platform to conveniently apply and pay for birth and death r
                   alt="Boma Yangu logo"
                   fallbackText="BY"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -557,6 +565,7 @@ The Boma Yangu platform is the gateway into the Affordable Housing Program. Star
                   alt="NCPWD logo"
                   fallbackText="NC"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -581,6 +590,7 @@ To promote and protect equalization of opportunities and realization of human ri
                   alt="KEBS logo"
                   fallbackText="KB"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
@@ -605,6 +615,7 @@ The Kenya Bureau of Standards (KEBS) has remained the premier government agency 
                   alt="NRB logo"
                   fallbackText="NRB"
                   className="w-full h-full object-contain"
+                  fallbackTextSize="small"
                 />
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-gray-300 group-hover:text-gray-400">
