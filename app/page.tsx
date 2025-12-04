@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import LogoImage from '@/components/LogoImage'
+import AdBanner from '@/components/AdBanner'
 
 export default function Home() {
   return (
@@ -162,37 +163,77 @@ Apply for a <br /> Marriage Certificate
       </div>
     </div>
     <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-
-      <div className="rounded-b-3xl relative overflow-hidden bg-[#00595E]">
-        <div className="absolute inset-0 h-full w-full">
-          
+      {/* Over 22,000 Section with Ads on Both Sides */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+        {/* Left Ad - Hidden on mobile, shown on large screens */}
+        <div className="hidden lg:block lg:col-span-2">
+          <AdBanner 
+            sponsor="University of Nairobi"
+            sponsorType="Higher Education Institution"
+            size="vertical"
+            className="h-full"
+          />
         </div>
-        <div className="relative sm:min-h-[250px] lg:min-h-[314px] w-full inline-flex justify-start items-center bg-black/20">
-          <div className="w-full">
-            <div className="py-10 sm:py-14 px-5 sm:px-10 max-w-3xl">
-              <h2 className="text-xl sm:text-3xl font-medium tracking-tight text-white">
-Over <strong>22,000</strong> Government services now available from <strong>100+</strong> Ministries, Counties, Departments and Agencies.
-              </h2>
-            </div>
-            <div className="px-5 sm:px-10 py-7 sm:flex items-center justify-between bg-gradient-to-tr from-black/60 to-black/40">
-              <h3 className="text-white text-xl sm:text-2xl font-normal">
-Get started on eCitizen today
-                </h3>
 
-              <div className="flex space-x-4 items-center lg:justify-end mt-4 sm:mt-0">
-                <Link href="/login" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-white py-2 px-4 font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none" title="Go to the login page">
-                  Sign in
-                </Link>
-                <Link href="/register" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-accentcolor-700 py-2 px-4 font-medium text-white shadow-sm hover:bg-accentcolor-800 focus:outline-none" title="Go to the registration page">
-                  Register
-                </Link>
+        {/* Center Content */}
+        <div className="lg:col-span-8">
+          <div className="rounded-b-3xl relative overflow-hidden bg-[#00595E]">
+            <div className="absolute inset-0 h-full w-full">
+              
+            </div>
+            <div className="relative sm:min-h-[250px] lg:min-h-[314px] w-full inline-flex justify-start items-center bg-black/20">
+              <div className="w-full">
+                <div className="py-10 sm:py-14 px-5 sm:px-10 max-w-3xl">
+                  <h2 className="text-xl sm:text-3xl font-medium tracking-tight text-white">
+Over <strong>22,000</strong> Government services now available from <strong>100+</strong> Ministries, Counties, Departments and Agencies.
+                  </h2>
+                </div>
+                <div className="px-5 sm:px-10 py-7 sm:flex items-center justify-between bg-gradient-to-tr from-black/60 to-black/40">
+                  <h3 className="text-white text-xl sm:text-2xl font-normal">
+Get started on eCitizen today
+                  </h3>
+
+                  <div className="flex space-x-4 items-center lg:justify-end mt-4 sm:mt-0">
+                    <Link href="/login" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-white py-2 px-4 font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none" title="Go to the login page">
+                      Sign in
+                    </Link>
+                    <Link href="/register" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-accentcolor-700 py-2 px-4 font-medium text-white shadow-sm hover:bg-accentcolor-800 focus:outline-none" title="Go to the registration page">
+                      Register
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Right Ad - Hidden on mobile, shown on large screens */}
+        <div className="hidden lg:block lg:col-span-2">
+          <AdBanner 
+            sponsor="Ministry of Education"
+            sponsorType="Government Department"
+            size="vertical"
+            className="h-full"
+          />
+        </div>
+      </div>
+
+      {/* Mobile Ads - Shown only on mobile, below the content */}
+      <div className="lg:hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <AdBanner 
+          sponsor="University of Nairobi"
+          sponsorType="Higher Education Institution"
+          size="horizontal"
+        />
+        <AdBanner 
+          sponsor="Ministry of Education"
+          sponsorType="Government Department"
+          size="horizontal"
+        />
       </div>
     </div>
   </div>
+
   {/* Ministries */}
   <div className="mt-5 py-8">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -294,6 +335,18 @@ Ministry Of Environment, Climate Change And Forestry
       </div>
     </div>
   </div>
+
+  {/* Advertisement Section - After Ministries */}
+  <div className="mt-8 py-6">
+    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <AdBanner 
+        sponsor="Kenya Commercial Bank"
+        sponsorType="Financial Institution"
+        size="horizontal"
+      />
+    </div>
+  </div>
+
   <div className="mt-5 py-8">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       
@@ -456,7 +509,18 @@ Leverage BRS's digital platform for simplified and efficient business registrati
               </p>
             </div>
           </div>
-        </a>        <a target="_blank" href="https://ecitizen.kra.go.ke/" title="Navigate to Kenya Revenue Authority page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
+        </a>
+
+        {/* Advertisement in Agencies Grid - After 6 agencies */}
+        <div className="col-span-1 sm:col-span-2 lg:col-span-3">
+          <AdBanner 
+            sponsor="Cooperative Bank of Kenya"
+            sponsorType="Banking Services"
+            size="horizontal"
+          />
+        </div>
+
+        <a target="_blank" href="https://ecitizen.kra.go.ke/" title="Navigate to Kenya Revenue Authority page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
           <div className="flex flex-col">
             <div className="p-3 flex-shrink-0 flex justify-between items-center border-b border-gray-300">
               <div className="w-8 h-8 bg-gray-100 rounded flex items-center justify-center relative overflow-hidden">
@@ -528,7 +592,7 @@ Civil Registration Services
               </h4>
               <p className="text-sm line-clamp-2 font-light text-gray-500/90 group-hover:text-gray-800">
 Access CRS's online platform to conveniently apply and pay for birth and death registration services.
-              </p>
+            </p>
           </div>
         </div>
         </a><a target="_blank" href="https://www.bomayangu.go.ke/" title="Navigate to Boma Yangu page" className="block overflow-hidden rounded-lg group bg-white hover:bg-gray-50 border border-gray-200">
@@ -635,6 +699,25 @@ The Department of National Registration Bureau was established in 1978 to implem
       </div>
     </div>
   </div>
+
+  {/* Advertisement Section - After Agencies (After National Registration Bureau) */}
+  <div className="mt-8 py-6">
+    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <AdBanner 
+          sponsor="Safaricom PLC"
+          sponsorType="Telecommunications Company"
+          size="horizontal"
+        />
+        <AdBanner 
+          sponsor="Equity Bank"
+          sponsorType="Financial Services"
+          size="horizontal"
+        />
+      </div>
+    </div>
+  </div>
+
   <div className="py-8">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       
@@ -766,6 +849,17 @@ The Department of National Registration Bureau was established in 1978 to implem
       </div>
     </div>
   </div>
+
+  {/* Advertisement Section - After Kisumu County */}
+  <div className="mt-8 py-6">
+    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <AdBanner 
+        sponsor="Kenya Power & Lighting Company"
+        sponsorType="Energy Provider"
+        size="horizontal"
+      />
+    </div>
+  </div>
   
   {/* Stats Section */}
   <div className="mt-5 py-12 bg-white border-t border-gray-200">
@@ -801,6 +895,16 @@ The single point of access for all government services
 Enjoy the convenience. Get information about government online services and make applications quickly and easily.
         </p>
       </div>
+
+      {/* Advertisement in Features Section */}
+      <div className="mt-12">
+        <AdBanner 
+          sponsor="Kenya Airways"
+          sponsorType="National Airline"
+          size="horizontal"
+        />
+      </div>
+
       <div className="mt-16 lg:mt-20">
         <dl className="space-y-10 lg:grid lg:grid-cols-3 lg:gap-9 lg:space-y-0">
           <div>
@@ -890,6 +994,29 @@ Search, apply and pay for services online, receive progress notifications and ac
             Monitor your application status in real-time and receive notifications when it's ready.
           </p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Advertisement Section - After How It Works */}
+  <div className="mt-8 py-6">
+    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <AdBanner 
+          sponsor="Airtel Kenya"
+          sponsorType="Telecommunications"
+          size="small"
+        />
+        <AdBanner 
+          sponsor="National Bank of Kenya"
+          sponsorType="Banking Services"
+          size="small"
+        />
+        <AdBanner 
+          sponsor="Kenya Railways"
+          sponsorType="Transport Services"
+          size="small"
+        />
       </div>
     </div>
   </div>
