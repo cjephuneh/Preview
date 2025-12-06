@@ -1,18 +1,37 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 interface AdBannerProps {
   sponsor?: string
   sponsorType?: string
   size?: 'small' | 'medium' | 'large' | 'horizontal' | 'vertical'
   className?: string
+  images?: string[] // Array of image paths for rotation
+  rotationInterval?: number // Rotation interval in milliseconds (default 30000 = 30 seconds)
 }
 
 export default function AdBanner({ 
   sponsor, 
   sponsorType = 'Organization',
   size = 'medium',
-  className = ''
+  className = '',
+  images = [],
+  rotationInterval = 30000 // 30 seconds default
 }: AdBannerProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  // Rotate images if provided
+  useEffect(() => {
+    if (images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+      }, rotationInterval)
+
+      return () => clearInterval(interval)
+    }
+  }, [images.length, rotationInterval])
+
   const sizeClasses = {
     small: 'h-32',
     medium: 'h-48',
@@ -21,6 +40,30 @@ export default function AdBanner({
     vertical: 'h-96 w-full'
   }
 
+  // If images are provided, display them
+  if (images.length > 0) {
+    const currentImage = images[currentImageIndex]
+    return (
+      <div className={`relative overflow-hidden rounded-lg ${sizeClasses[size]} ${className}`}>
+        <img
+          src={currentImage}
+          alt={sponsor || 'Advertisement'}
+          className="w-full h-full object-cover"
+        />
+        {sponsor && (
+          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-center">
+            <p className="text-xs text-gray-300">Proudly sponsored by</p>
+            <p className="text-sm font-semibold">{sponsor}</p>
+            {sponsorType && (
+              <p className="text-xs text-gray-400">{sponsorType}</p>
+            )}
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Fallback to placeholder if no images
   return (
     <div className={`bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center p-4 ${sizeClasses[size]} ${className}`}>
       <div className="text-center">
@@ -49,4 +92,3 @@ export default function AdBanner({
     </div>
   )
 }
-

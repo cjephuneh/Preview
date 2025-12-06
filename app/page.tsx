@@ -4,6 +4,36 @@ import Link from 'next/link'
 import LogoImage from '@/components/LogoImage'
 import AdBanner from '@/components/AdBanner'
 
+// Side ad GIFs (vertical ads)
+const sideAds = [
+  '/ads/side/1.gif',
+  '/ads/side/2.gif',
+  '/ads/side/3.gif',
+  '/ads/side/4.gif',
+  '/ads/side/5.gif',
+  '/ads/side/6.gif',
+  '/ads/side/7.gif',
+  '/ads/side/8.gif',
+  '/ads/side/9.gif',
+  '/ads/side/10.gif',
+  '/ads/side/11.gif',
+]
+
+// Landscape ad GIFs (horizontal ads)
+const landscapeAds = [
+  '/ads/landscape/1.gif',
+  '/ads/landscape/2.gif',
+  '/ads/landscape/3.gif',
+  '/ads/landscape/4.gif',
+  '/ads/landscape/5.gif',
+  '/ads/landscape/6.gif',
+  '/ads/landscape/7.gif',
+  '/ads/landscape/8.gif',
+  '/ads/landscape/9.gif',
+  '/ads/landscape/10.gif',
+  '/ads/landscape/11.gif',
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -165,18 +195,19 @@ Apply for a <br /> Marriage Certificate
     <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       {/* Over 22,000 Section with Ads on Both Sides */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-        {/* Left Ad - Hidden on mobile, shown on large screens */}
-        <div className="hidden lg:block lg:col-span-2">
+        {/* Left Ad - Hidden on mobile, shown on large screens - WIDER */}
+        <div className="hidden lg:block lg:col-span-3">
           <AdBanner 
             sponsor="University of Nairobi"
             sponsorType="Higher Education Institution"
             size="vertical"
             className="h-full"
+            images={sideAds}
           />
         </div>
 
-        {/* Center Content */}
-        <div className="lg:col-span-8">
+        {/* Center Content - NARROWER */}
+        <div className="lg:col-span-6">
           <div className="rounded-b-3xl relative overflow-hidden bg-[#00595E]">
             <div className="absolute inset-0 h-full w-full">
               
@@ -191,7 +222,7 @@ Over <strong>22,000</strong> Government services now available from <strong>100+
                 <div className="px-5 sm:px-10 py-7 sm:flex items-center justify-between bg-gradient-to-tr from-black/60 to-black/40">
                   <h3 className="text-white text-xl sm:text-2xl font-normal">
 Get started on eCitizen today
-                  </h3>
+                </h3>
 
                   <div className="flex space-x-4 items-center lg:justify-end mt-4 sm:mt-0">
                     <Link href="/login" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-white py-2 px-4 font-medium text-gray-800 shadow-sm hover:bg-gray-200 focus:outline-none" title="Go to the login page">
@@ -199,7 +230,7 @@ Get started on eCitizen today
                     </Link>
                     <Link href="/register" className="block md:inline w-full md:w-auto text-center rounded-3xl whitespace-nowrap border border-transparent bg-accentcolor-700 py-2 px-4 font-medium text-white shadow-sm hover:bg-accentcolor-800 focus:outline-none" title="Go to the registration page">
                       Register
-                    </Link>
+              </Link>
                   </div>
                 </div>
               </div>
@@ -207,13 +238,14 @@ Get started on eCitizen today
           </div>
         </div>
 
-        {/* Right Ad - Hidden on mobile, shown on large screens */}
-        <div className="hidden lg:block lg:col-span-2">
+        {/* Right Ad - Hidden on mobile, shown on large screens - WIDER */}
+        <div className="hidden lg:block lg:col-span-3">
           <AdBanner 
             sponsor="Ministry of Education"
             sponsorType="Government Department"
             size="vertical"
             className="h-full"
+            images={sideAds}
           />
         </div>
       </div>
@@ -224,11 +256,13 @@ Get started on eCitizen today
           sponsor="University of Nairobi"
           sponsorType="Higher Education Institution"
           size="horizontal"
+          images={landscapeAds}
         />
         <AdBanner 
           sponsor="Ministry of Education"
           sponsorType="Government Department"
           size="horizontal"
+          images={landscapeAds}
         />
       </div>
     </div>
@@ -343,6 +377,7 @@ Ministry Of Environment, Climate Change And Forestry
         sponsor="Kenya Commercial Bank"
         sponsorType="Financial Institution"
         size="horizontal"
+        images={landscapeAds}
       />
     </div>
   </div>
@@ -517,6 +552,7 @@ Leverage BRS's digital platform for simplified and efficient business registrati
             sponsor="Cooperative Bank of Kenya"
             sponsorType="Banking Services"
             size="horizontal"
+            images={landscapeAds}
           />
         </div>
 
@@ -708,11 +744,13 @@ The Department of National Registration Bureau was established in 1978 to implem
           sponsor="Safaricom PLC"
           sponsorType="Telecommunications Company"
           size="horizontal"
+          images={landscapeAds}
         />
         <AdBanner 
           sponsor="Equity Bank"
           sponsorType="Financial Services"
           size="horizontal"
+          images={landscapeAds}
         />
       </div>
     </div>
@@ -857,6 +895,7 @@ The Department of National Registration Bureau was established in 1978 to implem
         sponsor="Kenya Power & Lighting Company"
         sponsorType="Energy Provider"
         size="horizontal"
+        images={landscapeAds}
       />
     </div>
   </div>
@@ -902,6 +941,7 @@ Enjoy the convenience. Get information about government online services and make
           sponsor="Kenya Airways"
           sponsorType="National Airline"
           size="horizontal"
+          images={landscapeAds}
         />
       </div>
 
@@ -1005,17 +1045,20 @@ Search, apply and pay for services online, receive progress notifications and ac
         <AdBanner 
           sponsor="Airtel Kenya"
           sponsorType="Telecommunications"
-          size="small"
+          size="horizontal"
+          images={landscapeAds}
         />
         <AdBanner 
           sponsor="National Bank of Kenya"
           sponsorType="Banking Services"
-          size="small"
+          size="horizontal"
+          images={landscapeAds}
         />
         <AdBanner 
           sponsor="Kenya Railways"
           sponsorType="Transport Services"
-          size="small"
+          size="horizontal"
+          images={landscapeAds}
         />
       </div>
     </div>
