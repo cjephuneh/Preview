@@ -1,40 +1,45 @@
+'use client'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import LogoImage from '@/components/LogoImage'
-import AdBanner from '@/components/AdBanner'
-
-// Side ad GIFs (vertical ads)
-const sideAds = [
-  '/ads/side/1.gif',
-  '/ads/side/2.gif',
-  '/ads/side/3.gif',
-  '/ads/side/4.gif',
-  '/ads/side/5.gif',
-  '/ads/side/6.gif',
-  '/ads/side/7.gif',
-  '/ads/side/8.gif',
-  '/ads/side/9.gif',
-  '/ads/side/10.gif',
-  '/ads/side/11.gif',
-]
-
-// Landscape ad GIFs (horizontal ads)
-const landscapeAds = [
-  '/ads/landscape/1.gif',
-  '/ads/landscape/2.gif',
-  '/ads/landscape/3.gif',
-  '/ads/landscape/4.gif',
-  '/ads/landscape/5.gif',
-  '/ads/landscape/6.gif',
-  '/ads/landscape/7.gif',
-  '/ads/landscape/8.gif',
-  '/ads/landscape/9.gif',
-  '/ads/landscape/10.gif',
-  '/ads/landscape/11.gif',
-]
+import AdBannerWithStorage from '@/components/AdBannerWithStorage'
+import { usePreviewMode } from '@/components/PreviewModeDetector'
 
 export default function Home() {
+  // Side ad GIFs (vertical ads)
+  const sideAds = [
+    '/ads/side/1.gif',
+    '/ads/side/2.gif',
+    '/ads/side/3.gif',
+    '/ads/side/4.gif',
+    '/ads/side/5.gif',
+    '/ads/side/6.gif',
+    '/ads/side/7.gif',
+    '/ads/side/8.gif',
+    '/ads/side/9.gif',
+    '/ads/side/10.gif',
+    '/ads/side/11.gif',
+  ]
+
+  // Landscape ad GIFs (horizontal ads)
+  const landscapeAds = [
+    '/ads/landscape/1.gif',
+    '/ads/landscape/2.gif',
+    '/ads/landscape/3.gif',
+    '/ads/landscape/4.gif',
+    '/ads/landscape/5.gif',
+    '/ads/landscape/6.gif',
+    '/ads/landscape/7.gif',
+    '/ads/landscape/8.gif',
+    '/ads/landscape/9.gif',
+    '/ads/landscape/10.gif',
+    '/ads/landscape/11.gif',
+  ]
+
+  const previewMode = usePreviewMode()
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -106,25 +111,39 @@ export default function Home() {
           </div>
           
           <div id="home_live_content">
-  <div className="relative">
-    <div className="relative z-20 bg-gray-400">
-
-      <div className="absolute inset-0 isolate h-full w-full">
-        <div className="relative w-full h-full bg-no-repeat bg-bottom bg-cover -z-10" style={{backgroundImage: "url('https://demoadmin.ecitizen.pesaflow.com/assets/uploads/eCitizen-hero-banner-5.jpg')"}}>
-          <div className="w-full h-full absolute top-0 left-0 bg-black/60 md:bg-transparent md:bg-gradient-to-t md:from-gray-900/70 md:via-gray-900/60 lg:to-transparent">
+            <div className="relative">
+              <div className="relative z-20 bg-gray-400">
+                <div className="absolute inset-0 isolate h-full w-full">
+                  <div className="relative w-full h-full bg-no-repeat bg-bottom bg-cover -z-10" style={{backgroundImage: "url('https://demoadmin.ecitizen.pesaflow.com/assets/uploads/eCitizen-hero-banner-5.jpg')"}}>
+                    <div className="w-full h-full absolute top-0 left-0 bg-black/60 md:bg-transparent md:bg-gradient-to-t md:from-gray-900/70 md:via-gray-900/60 lg:to-transparent">
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between pt-14 sm:pt-32 relative z-20 gap-6">
+          <div className="max-w-none text-left md:max-w-2xl lg:max-w-4xl">
+            <h1 className="text-[1.575rem] sm:text-3xl lg:text-4xl font-medium tracking-wide text-white leading-8 sm:leading-10">
+Government of Kenya services
+              <strong>simplified</strong> <br />
+All your government records
+              <strong>unified</strong>
+          </h1>
+          </div>
+          {/* Video on the right top */}
+          <div className="w-full lg:w-auto lg:flex-shrink-0">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full lg:w-80 xl:w-96 h-auto rounded-lg shadow-2xl border-2 border-white/20"
+            >
+              <source src="/videos/live.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
-      </div>
-      <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-none pt-14 text-left md:max-w-2xl lg:max-w-4xl sm:pt-32 relative z-20">
-          <h1 className="text-[1.575rem] sm:text-3xl lg:text-4xl font-medium tracking-wide text-white leading-8 sm:leading-10">
-Government of Kenya services
-            <strong>simplified</strong> <br />
-All your government records
-            <strong>unified</strong>
-          </h1>
-        </div>
-        <div className="mt-10 rounded-t-3xl bg-gray-900 bg-opacity-40 px-5 py-5 backdrop-blur-sm backdrop-filter sm:px-10 sm:py-10 lg:bg-opacity-30">
+                <div className="mt-10 rounded-t-3xl bg-gray-900 bg-opacity-40 px-5 py-5 backdrop-blur-sm backdrop-filter sm:px-10 sm:py-10 lg:bg-opacity-30">
           <div className="relative rounded-3xl shadow-sm" id="search_area">
             <div className="relative">
               <div className="pointer-events-none absolute inset-y-0 left-0 z-10 flex items-center pl-3">
@@ -190,19 +209,24 @@ Apply for a <br /> Marriage Certificate
             </a>
           </div>
         </div>
-      </div>
-    </div>
-    <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-      {/* Over 22,000 Section with Ads on Both Sides */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
-        {/* Left Ad - Hidden on mobile, shown on large screens - WIDER */}
-        <div className="hidden lg:block lg:col-span-3">
-          <AdBanner 
-            sponsor="University of Nairobi"
-            sponsorType="Higher Education Institution"
+              </div>
+            </div>
+          </div>
+          
+          <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+            {/* Over 22,000 Section with Ads on Both Sides */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+              {/* Left Ad - Hidden on mobile, shown on large screens - WIDER */}
+              <div className="hidden lg:block lg:col-span-3">
+          <AdBannerWithStorage
+            containerId="side-left-1"
+            defaultImages={sideAds}
+            defaultSponsor="University of Nairobi"
+            defaultSponsorType="Higher Education Institution"
             size="vertical"
             className="h-full"
-            images={sideAds}
+            showMarker={previewMode}
+            markerLabel="Left Side Ad (Top)"
           />
         </div>
 
@@ -240,37 +264,46 @@ Get started on eCitizen today
 
         {/* Right Ad - Hidden on mobile, shown on large screens - WIDER */}
         <div className="hidden lg:block lg:col-span-3">
-          <AdBanner 
-            sponsor="Ministry of Education"
-            sponsorType="Government Department"
+          <AdBannerWithStorage
+            containerId="side-right-1"
+            defaultImages={sideAds}
+            defaultSponsor="Ministry of Education"
+            defaultSponsorType="Government Department"
             size="vertical"
             className="h-full"
-            images={sideAds}
+            showMarker={previewMode}
+            markerLabel="Right Side Ad (Top)"
           />
         </div>
       </div>
 
       {/* Mobile Ads - Shown only on mobile, below the content */}
       <div className="lg:hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <AdBanner 
-          sponsor="University of Nairobi"
-          sponsorType="Higher Education Institution"
+        <AdBannerWithStorage
+          containerId="side-left-1"
+          defaultImages={landscapeAds}
+          defaultSponsor="University of Nairobi"
+          defaultSponsorType="Higher Education Institution"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="Mobile Ad 1"
         />
-        <AdBanner 
-          sponsor="Ministry of Education"
-          sponsorType="Government Department"
+        <AdBannerWithStorage
+          containerId="side-right-1"
+          defaultImages={landscapeAds}
+          defaultSponsor="Ministry of Education"
+          defaultSponsorType="Government Department"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="Mobile Ad 2"
         />
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* Ministries */}
-  <div className="mt-5 py-8">
-    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      {/* Ministries */}
+      <div className="mt-5 py-8">
+        <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       
       <div className="flex items-center justify-between mb-5">
         <h3 className="font-semibold text-xl sm:text-2xl">National Ministries</h3>
@@ -367,22 +400,25 @@ Ministry Of Environment, Climate Change And Forestry
           </div>
         </Link>
       </div>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  {/* Advertisement Section - After Ministries */}
-  <div className="mt-8 py-6">
+      {/* Advertisement Section - After Ministries */}
+      <div className="mt-8 py-6">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-      <AdBanner 
-        sponsor="Kenya Commercial Bank"
-        sponsorType="Financial Institution"
+      <AdBannerWithStorage
+        containerId="horizontal-1"
+        defaultImages={landscapeAds}
+        defaultSponsor="Kenya Commercial Bank"
+        defaultSponsorType="Financial Institution"
         size="horizontal"
-        images={landscapeAds}
+        showMarker={previewMode}
+        markerLabel="After Ministries"
       />
     </div>
-  </div>
+      </div>
 
-  <div className="mt-5 py-8">
+      <div className="mt-5 py-8">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       
       <div className="flex items-center justify-between mb-5">
@@ -548,11 +584,14 @@ Leverage BRS's digital platform for simplified and efficient business registrati
 
         {/* Advertisement in Agencies Grid - After 6 agencies */}
         <div className="col-span-1 sm:col-span-2 lg:col-span-3">
-          <AdBanner 
-            sponsor="Cooperative Bank of Kenya"
-            sponsorType="Banking Services"
+          <AdBannerWithStorage
+            containerId="horizontal-2"
+            defaultImages={landscapeAds}
+            defaultSponsor="Cooperative Bank of Kenya"
+            defaultSponsorType="Banking Services"
             size="horizontal"
-            images={landscapeAds}
+            showMarker={previewMode}
+            markerLabel="In Agencies Grid"
           />
         </div>
 
@@ -734,29 +773,35 @@ The Department of National Registration Bureau was established in 1978 to implem
         </a>
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* Advertisement Section - After Agencies (After National Registration Bureau) */}
-  <div className="mt-8 py-6">
+      {/* Advertisement Section - After Agencies (After National Registration Bureau) */}
+      <div className="mt-8 py-6">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <AdBanner 
-          sponsor="Safaricom PLC"
-          sponsorType="Telecommunications Company"
+        <AdBannerWithStorage
+          containerId="horizontal-3a"
+          defaultImages={landscapeAds}
+          defaultSponsor="Safaricom PLC"
+          defaultSponsorType="Telecommunications Company"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="After Agencies (Left)"
         />
-        <AdBanner 
-          sponsor="Equity Bank"
-          sponsorType="Financial Services"
+        <AdBannerWithStorage
+          containerId="horizontal-3b"
+          defaultImages={landscapeAds}
+          defaultSponsor="Equity Bank"
+          defaultSponsorType="Financial Services"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="After Agencies (Right)"
         />
       </div>
     </div>
-  </div>
+      </div>
 
-  <div className="py-8">
+      <div className="py-8">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       
       <div className="flex items-center justify-between mb-5">
@@ -886,22 +931,25 @@ The Department of National Registration Bureau was established in 1978 to implem
         </Link>
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* Advertisement Section - After Kisumu County */}
-  <div className="mt-8 py-6">
+      {/* Advertisement Section - After Kisumu County */}
+      <div className="mt-8 py-6">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-      <AdBanner 
-        sponsor="Kenya Power & Lighting Company"
-        sponsorType="Energy Provider"
+      <AdBannerWithStorage
+        containerId="horizontal-4"
+        defaultImages={landscapeAds}
+        defaultSponsor="Kenya Power & Lighting Company"
+        defaultSponsorType="Energy Provider"
         size="horizontal"
-        images={landscapeAds}
+        showMarker={previewMode}
+        markerLabel="After Counties"
       />
     </div>
-  </div>
-  
-  {/* Stats Section */}
-  <div className="mt-5 py-12 bg-white border-t border-gray-200">
+      </div>
+      
+      {/* Stats Section */}
+      <div className="mt-5 py-12 bg-white border-t border-gray-200">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
         <div className="text-center">
@@ -922,9 +970,9 @@ The Department of National Registration Bureau was established in 1978 to implem
         </div>
       </div>
     </div>
-  </div>
+      </div>
 
-  <div className="xl:py-30 mt-5 bg-gray-100 py-16 sm:py-20">
+      <div className="xl:py-30 mt-5 bg-gray-100 py-16 sm:py-20">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <div>
         <h2 className="top-red-line text-2xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
@@ -937,11 +985,14 @@ Enjoy the convenience. Get information about government online services and make
 
       {/* Advertisement in Features Section */}
       <div className="mt-12">
-        <AdBanner 
-          sponsor="Kenya Airways"
-          sponsorType="National Airline"
+        <AdBannerWithStorage
+          containerId="horizontal-5"
+          defaultImages={landscapeAds}
+          defaultSponsor="Kenya Airways"
+          defaultSponsorType="National Airline"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="In Features Section"
         />
       </div>
 
@@ -995,10 +1046,10 @@ Search, apply and pay for services online, receive progress notifications and ac
         </dl>
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* How It Works Section */}
-  <div className="mt-5 py-16 bg-white">
+      {/* How It Works Section */}
+      <div className="mt-5 py-16 bg-white">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-semibold text-gray-900 mb-4">How It Works</h2>
@@ -1036,38 +1087,47 @@ Search, apply and pay for services online, receive progress notifications and ac
         </div>
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* Advertisement Section - After How It Works */}
-  <div className="mt-8 py-6">
+      {/* Advertisement Section - After How It Works */}
+      <div className="mt-8 py-6">
     <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <AdBanner 
-          sponsor="Airtel Kenya"
-          sponsorType="Telecommunications"
+        <AdBannerWithStorage
+          containerId="horizontal-6a"
+          defaultImages={landscapeAds}
+          defaultSponsor="Airtel Kenya"
+          defaultSponsorType="Telecommunications"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="After How It Works (1)"
         />
-        <AdBanner 
-          sponsor="National Bank of Kenya"
-          sponsorType="Banking Services"
+        <AdBannerWithStorage
+          containerId="horizontal-6b"
+          defaultImages={landscapeAds}
+          defaultSponsor="National Bank of Kenya"
+          defaultSponsorType="Banking Services"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="After How It Works (2)"
         />
-        <AdBanner 
-          sponsor="Kenya Railways"
-          sponsorType="Transport Services"
+        <AdBannerWithStorage
+          containerId="horizontal-6c"
+          defaultImages={landscapeAds}
+          defaultSponsor="Kenya Railways"
+          defaultSponsorType="Transport Services"
           size="horizontal"
-          images={landscapeAds}
+          showMarker={previewMode}
+          markerLabel="After How It Works (3)"
         />
       </div>
     </div>
-  </div>
+      </div>
 
-  {/* CTA Banner */}
-  <div className="mt-5 py-12 bg-gradient-to-r from-[#00595E] to-[#007a82] text-white">
-    <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
+      {/* CTA Banner */}
+      <div className="mt-5 py-12 bg-gradient-to-r from-[#00595E] to-[#007a82] text-white">
+        <div className="w-full mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Ready to get started?</h2>
         <p className="text-lg mb-6 text-white/90 max-w-2xl mx-auto">
           Join millions of Kenyans who are already using eCitizen to access government services online.
@@ -1079,12 +1139,11 @@ Search, apply and pay for services online, receive progress notifications and ac
           <Link href="/login" className="inline-block rounded-3xl border-2 border-white py-3 px-8 font-medium text-white hover:bg-white/10 transition-colors">
             Sign In
           </Link>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-          </div>
-        </main>
+      </div>
+      </main>
       </div>
       <Footer />
     </div>

@@ -18,7 +18,7 @@ export default function Footer() {
                     <circle cx="10" cy="38" r="2.5" fill="#000000"/>
                     <circle cx="30" cy="38" r="2.5" fill="#000000"/>
                     <rect x="16" y="40" width="8" height="6" fill="#000000"/>
-                  </svg>
+                </svg>
                 </div>
                 {/* eCitizen Logo */}
                 <div className="flex items-center space-x-1">
@@ -36,7 +36,7 @@ export default function Footer() {
               Government of Kenya
             </p>
           </div>
-
+          
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>

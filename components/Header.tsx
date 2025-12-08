@@ -26,8 +26,8 @@ export default function Header() {
                     {/* Base */}
                     <rect x="20" y="50" width="10" height="8" fill="#000000"/>
                     <text x="25" y="58" fontSize="4" fill="#FFD700" textAnchor="middle">KENYA</text>
-                  </svg>
-                </div>
+              </svg>
+            </div>
                 
                 {/* eCitizen Text Logo */}
                 <div className="flex flex-col">
@@ -47,6 +47,9 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-700 hover:text-[#00595E] transition-colors text-sm font-medium">
               Home
+            </Link>
+            <Link href="/admin" className="text-gray-700 hover:text-[#00595E] transition-colors text-sm font-medium">
+              Admin
             </Link>
             <Link href="/national" className="text-gray-700 hover:text-[#00595E] transition-colors text-sm font-medium">
               National
